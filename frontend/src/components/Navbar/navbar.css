@@ -1,0 +1,200 @@
+
+
+/* General Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #333;
+  color: #fff;
+  position: relative;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  font-size: 1.5em;
+}
+
+.navbar-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.navbar-item {
+  position: relative;
+}
+
+.navbar-item a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  color: #333;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-menu li a {
+  color: #333;
+  padding: 10px;
+  display: block;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #ddd;
+}
+
+.dropdown .dropdown-menu {
+  display: block;
+
+}
+
+.navbar-right {
+  display: flex;
+  gap: 10px;
+}
+
+.navbar-button1 {
+  background-color: teal; /* Chakra UI uses colorScheme for this */
+  color: #fff;
+  border: none;
+  font-size: 1em;
+  border-radius: 5px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+  margin-left: 500px;
+}
+
+.navbar-button2 {
+  background-color: teal; /* Chakra UI uses colorScheme for this */
+  color: #fff;
+  border: none;
+  font-size: 1em;
+  
+  border-radius: 5px;
+  padding: 7px 15px;
+  transition: background-color 0.3s ease;
+  margin-right: 50px;
+
+}
+
+.navbar-button-link {
+  color: inherit; /* Inherit color from button */
+  text-decoration: none;
+}
+
+.navbar-button:hover {
+  background-color: #004d40; /* Darker teal */
+}
+
+
+
+/* Responsive Styles */
+
+/* Small screens (max-width 480px) */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0 10px;
+  }
+
+  .navbar-logo {
+    font-size: 1.2em;
+  }
+
+  .navbar-menu {
+    display: none; /* Hide menu items by default */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    gap: 0; /* Remove gap for mobile view */
+  }
+
+  .navbar-menu.active {
+    display: flex; /* Show menu items when hamburger menu is active */
+  }
+
+  .navbar-hamburger {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .navbar-menu .navbar-item {
+    width: 100%;
+  }
+
+  .navbar-right {
+    display: none; /* Hide right side items on mobile */
+  }
+}
+
+/* Medium screens (max-width 720px) and min-width 481px */
+@media (max-width: 720px) and (min-width: 481px) {
+  .navbar {
+    padding: 0 15px;
+  }
+
+  .navbar-logo {
+    font-size: 1.3em;
+  }
+
+  .navbar-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  .navbar-right {
+    display: flex;
+  }
+
+  .navbar-hamburger {
+    display: none;
+  }
+}
+
+/* Large screens (min-width 1024px) */
+@media (min-width: 1024px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .navbar-logo {
+    font-size: 1.5em;
+  }
+
+  .navbar-menu {
+    display: flex;
+    gap: 10px;
+  }
+
+  .navbar-right {
+    display: flex;
+  }
+}
+
